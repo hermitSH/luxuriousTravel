@@ -1,0 +1,111 @@
+html, body {
+    position: relative;
+    height: 100%; font-size: 14px;
+}
+* {margin: 0;padding: 0;}
+#page-content {width: 100%;height: 100%;}
+.swiper-container{
+    --swiper-theme-color: #fff;/* 设置Swiper风格 */
+    --swiper-navigation-color: #fff;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 30px;/* 设置按钮大小 */
+}
+.swiper-pagination-bullet-active {opacity: 1;background: #B6CAE3;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0;}
+
+p{ padding: 20px 30px}
+.banner .swiper-slide{background: no-repeat center center; background-size: cover}
+.glyphicon{ top: auto}
+.glyphicon-menu-down{
+    position: fixed; bottom: 0; left:47%; height: 50px; z-index: 9999; font-size: 26px;
+    animation: rightan 1s linear 0s infinite alternate;
+    -webkit-animation: rightan 1s linear 0s infinite alternate;
+    -moz-animation: rightan 1s linear 0s infinite alternate;
+}
+@-webkit-keyframes rightan { from {bottom: 0;} to {bottom: -10px;} }
+
+img{ vertical-align: top}
+.mould-top-pic{ text-align: center; position: relative; height: calc(100% - 354px); background: no-repeat center 0px; background-size: cover}
+.mould-bottom-text{ text-align: center; padding-top: 20px}
+.mould-bottom-text img{ height: 220px}
+
+.mould-title2{ padding: 20px 0 20px 0; text-align: center}
+.mould-title2 img{ height: 60px}
+.mould-bottom-tag2{text-align: center;padding-top: 20px}
+.mould-bottom-tag2 img{ height: 150px}
+.mould-banner2{ position: relative;height: calc(100% - 280px); max-height: 300px}
+.mould-banner2{ padding-bottom: 30px}
+
+.mould-img3{
+    height: 100%; padding: 0px 20px 160px 20px; text-align: center;
+}
+.inner-full-img{height: 100%; max-width: 100%}
+
+.mould-img4{
+    height: 100%; margin: 0px 20px 0px 20px; text-align: center; overflow: hidden; background: no-repeat center 0px; background-size: cover
+}
+
+.swiper-button-next, .swiper-button-prev {position: absolute;top: 50%;width: 27px;height: 44px;margin-top: -44px;z-index: 10;cursor: pointer;background-size: 27px 22px;background-position: center;background-repeat: no-repeat;}
+
+.arrow-down {position: fixed;bottom: 0px;left: 47%;height: 50px;z-index: 9999;font-size: 26px;animation: rightan 1s linear 0s infinite alternate;-webkit-animation: rightan 1s linear 0s infinite alternate;-moz-animation: rightan 1s linear 0s infinite alternate;}
+.full-img {width: 100%; height: 100%; background-size: cover; background-position: center center}
+.margin-top-70px{margin-top: 70px}
+.page-middle-banner{position: relative; height: calc(100% - 400px); max-height: 280px; padding-bottom: 30px}
+
+.page-3-img{height: 100%; padding: 16px 48px 90px 48px; text-align: center;}
+
+.page-4-title {padding: 30px 0 31px 0; text-align: center}
+.page-4-title img{ height: 54px}
+/*.page-4-img{position: relative; height: calc(100% - 280px); max-height: 300px}*/
+.page-4-img{ text-align: center; position: relative; height: calc(100% - 384px); background: no-repeat center 0px; background-size: cover}
+.page-4-tag {text-align: center;padding-top: 43px}
+.page-4-tag img{ height: 36px}
+
+.page-5-title {padding: 30px 0 26px 0; text-align: center}
+.page-5-title img{ height: 51px}
+.page-5-tag {text-align: center;padding-top: 11.5px}
+.page-5-tag img{height: 265px}
+
+.page-6-top-pic{ text-align: center; position: relative; height: calc(100% - 352px); background: no-repeat center 0px; background-size: cover}
+.page-6-bottom-text{ text-align: center; padding-top: 36px}
+.page-6-bottom-text img{ height: 215px}
+
+.page-9-img{height: 100%; padding: 63px 57px 124px 65px; text-align: center;}
+
+.page-10-title {padding: 24px 0 23px 0; text-align: center}
+.page-10-title img{ height: 61px}
+.page-10-tag {text-align: center;padding-top: 62.5px}
+.page-10-tag img{height: 159px}
+
+.page-11-top-pic{ text-align: center; position: relative; height: calc(100% - 493px); background-size: cover; background-position: center center}
+.page-11-bottom-text{ text-align: center; padding-top: 27px}
+.page-11-bottom-text img{ height: 381px}
+
+.page-12-title {padding: 17px 0 13px 0; text-align: center}
+.page-12-title img{ height: 65px}
+.page-12-img{height: calc(100% - 95px); padding: 0px 24px 85px 24px; text-align: center;}
+
+.page-13-img{height: 100%; margin: 0px 15px 0px 15px; text-align: center; overflow: hidden; background-position: center center; background-size: cover}
+
+.page-14-img{height: 100%; padding: 97px 24px 85px 24px; text-align: center;}
+
+.page-18-title {padding: 15px 0 0 0; text-align: center}
+.page-18-title img{ height: 56px}
+.page-18-img{height: calc(100% - 70px); padding: 0 25px 67px 24px; text-align: center;}
+
+.page-19-img{height: calc(100% - 70px); padding: 0 24px 67px 24px; text-align: center;}
+.page-22-img{height: 100%; padding: 12px 25px 85px 24px; text-align: center;}
+.page-27-img{height: 100%; padding: 0 27px 80px 27px; text-align: center;}
+
+.page-31-top-pic{ text-align: center; position: relative; height: calc(100% - 354px); background-size: cover; background-position: center center}
+.page-31-bottom-text{ text-align: center; padding-top: 10px}
+.page-31-bottom-text img{ height: 290px}
+
+.page-53-img{height: 100%; padding: 23px 27px 77px 27px; text-align: center;}
+
+.page-55-top-pic{ text-align: center; position: relative; height: calc(100% - 314px); background-size: cover; background-position: center center}
+.page-55-bottom-text{ text-align: center; padding-top: 30px}
+.page-55-bottom-text img{ height: 168px}
+.page-56-img{height: 100%; padding: 20px 29px 78px 30px; text-align: center;}
+.page-61-img{height: 100%; padding: 0 35px 112px 36px; text-align: center;}
+.page-62-img{height: 100%; padding: 10px 36px 76px 37px; text-align: center;}
+.page-71-img{height: 100%; padding: 0 35px 75px 35px; text-align: center;}
