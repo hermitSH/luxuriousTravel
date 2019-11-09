@@ -29,7 +29,6 @@ var mySwiper = new Swiper('#page-content',{
             }
 
             var banner = $("#page-content .swiper-wrapper .swiper-slide[data-swiper-slide-index=" + this.activeIndex + "]").find(".banner")
-
             if(banner.length > 0) {
                 if(!$(banner[0]).data("sub-inited")) {
                     initBanner(banner[0])
