@@ -110,3 +110,9 @@ img{ vertical-align: top}
 .page-61-img{height: 100%; padding: 0 35px 112px 36px; text-align: center;}
 .page-62-img{height: 100%; padding: 10px 36px 76px 37px; text-align: center;}
 .page-71-img{height: 100%; padding: 0 35px 75px 35px; text-align: center;}
+
+#audio_btn {width: 30px;height: 30px;background-image: url('https://yinxin-h5-img.oss-cn-shanghai.aliyuncs.com/img/music_play.png');background-size: contain;position: fixed;top: 2%;left: 88%;z-index: 9999;}
+.rotate {-webkit-animation: rotating 5s linear infinite;-moz-animation: rotating 5s linear infinite;-o-animation: rotating 5s linear infinite;animation: rotating 5s linear infinite}
+@-webkit-keyframes rotating { from {-webkit-transform: rotate(0)} to {-webkit-transform: rotate(360deg)} }
+@keyframes rotating { from {transform: rotate(0)} to {transform: rotate(360deg)} }
+@-moz-keyframes rotating { from {-moz-transform: rotate(0)} to {-moz-transform: rotate(360deg)} }

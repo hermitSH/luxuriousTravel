@@ -1,7 +1,27 @@
 var count=$('.swiper-slide.page').length;
 var inited = false;
 var playerMap = {};
+var needRestore = false;
+var isMediaInit = false;
 
+var media = document.getElementById("media");
+
+$(function () {
+    media.play();
+    $("#audio_btn").addClass("rotate");
+    $("#audio_btn").click(function () {
+        $(this).toggleClass("rotate"); //控制音乐图标 自转或暂停
+        needRestore = false;
+        //控制背景音乐 播放或暂停
+        if ($(this).hasClass("rotate")) {
+            $(this).css("background-image", "url(https://yinxin-h5-img.oss-cn-shanghai.aliyuncs.com/img/music_play.png)");
+            media.play();
+        } else {
+            $(this).css("background-image", "url(https://yinxin-h5-img.oss-cn-shanghai.aliyuncs.com/img/music_stop.png)");
+            media.pause();
+        }
+    })
+});
 var mySwiper = new Swiper('#page-content',{
     mousewheelControl : true,
     virtual: {
@@ -55,6 +75,12 @@ var mySwiper = new Swiper('#page-content',{
 
             playCurrentVideo(this.activeIndex)
         },
+        touchStart: function(event){
+            if (!isMediaInit) {
+                isMediaInit = true;
+                media.play()
+            }
+        },
         init: function(){
             count= this.virtual.slides.length;
             initDOM()
@@ -82,6 +108,15 @@ function playCurrentVideo(index) {
             var playerId = "J_prismPlayer" + index;
             var player = playerMap[playerId];
             player.play();
+
+            if (!media.paused) {
+                needRestore = true;
+            }
+            setAudioPlayStatus(true)
+        }
+    } else {
+        if (media.paused && needRestore) {
+            setAudioPlayStatus(false)
         }
     }
 }
@@ -233,4 +268,16 @@ function setVideo(id,url) {
     }
 
     playerMap[id] = aliplayer
+}
+
+function setAudioPlayStatus(toStop) {
+    if (toStop) {
+        $("#audio_btn").css("background-image", "url(https://yinxin-h5-img.oss-cn-shanghai.aliyuncs.com/img/music_stop.png)");
+        $("#audio_btn").removeClass("rotate");
+        media.pause();
+    } else {
+        $("#audio_btn").css("background-image", "url(https://yinxin-h5-img.oss-cn-shanghai.aliyuncs.com/img/music_play.png)");
+        $("#audio_btn").addClass("rotate");
+        media.play();
+    }
 }
